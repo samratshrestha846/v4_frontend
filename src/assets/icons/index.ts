@@ -1,0 +1,19 @@
+export { default as Cattle } from './cattle.svg';
+export { default as Duration } from './duration.svg';
+export { default as Nutrient } from './nutrient.svg';
+export { default as WaterFlow } from './water.svg';
+export { default as Cow } from './cow.png';
+export { default as Map } from './map.png';
+export { default as SiteMap } from './site-map.png';
+export { default as MinRain } from './minimum.svg';
+export { default as MaxRain } from './maximum.svg';
+export { default as AvgRain } from './average.svg';
+export { default as RainfallMap } from './rainfallMap.png';
+export { default as mapMarkerIcon } from './map-marker-icon.png';
+export { default as searchLocationIcon } from './search-location-icon.png';
+export { default as cowStanding } from './cowStanding.png';
+
+export { default as CarbonAccountIcon } from './CarbonAccount';
+export { default as LeakageIcon } from './Leakage';
+export { default as FollowUpIcon } from './FollowUp';
+export { default as ServiceLogIcon } from './ServiceLog';

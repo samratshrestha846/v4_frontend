@@ -1,0 +1,32 @@
+//
+// pagination.scss
+//
+
+// Pagination rounded (Custom)
+.pagination-rounded {
+  // float: right !important;
+  .page-link {
+    border-radius: 30px !important;
+    margin: 0 3px !important;
+    border: none !important;
+  }
+
+  button[disabled] {
+    color: $gray-500 !important;
+  }
+}
+.react-bootstrap-table-pagination {
+  .btn-secondary {
+    color: #fff;
+    background-color: #d5d6d5 !important;
+    border-color: #d5d6d5 !important;
+    box-shadow: none !important;
+    color: #04723b;
+  }
+}
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #154989;
+  border-color: #154989;
+}

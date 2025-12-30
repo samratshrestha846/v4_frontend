@@ -1,0 +1,20 @@
+{
+  "name": "@project/ditconnect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DitConnect.tsx",
+  "types": "DitConnect.d.ts",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uhub/components": "@project/uhub:*",
+    "@uhub/hooks": "@project/uhub:*",
+    "@uhub/types": "@project/uhub:*",
+    "@uhub/routes": "@project/uhub:*",
+    "@uhub/helpers": "@project/uhub:*"
+  }
+}

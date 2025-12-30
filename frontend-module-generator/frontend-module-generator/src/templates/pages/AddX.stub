@@ -1,0 +1,35 @@
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import PageTitle from '@uhub/components/PageTitle';
+import { _XXXX__ADD, _XXXX__LIST } from '../constants/constant';
+import _X_Form from './_X_Form';
+import { _X_FormProps } from '../types/_X_';
+
+const Add_X_: React.FC = () => {
+  const title: string = '_X_';
+  const defaultValues: _X_FormProps = {
+    // form props
+  };
+  return (
+    <>
+      <PageTitle
+        breadCrumbItems={[
+          { label: `${title}`, path: _XXXX__LIST, active: false },
+          {
+            label: `Add ${title}`,
+            path: _XXXX__ADD,
+            active: true,
+          },
+        ]}
+        title={`Add ${title}`}
+      />
+      <Card>
+        <Card.Body>
+          <_X_Form defaultValues={defaultValues} />
+        </Card.Body>
+      </Card>
+    </>
+  );
+};
+
+export default Add_X_;

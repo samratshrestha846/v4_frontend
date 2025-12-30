@@ -1,0 +1,20 @@
+import { DIT_CONNECT } from '../../constants/path';
+
+/** ************************* */
+/*    PATHS                 */
+/** ************************* */
+
+export const _XXXX__LIST = `${DIT_CONNECT}/_x-x_/list`;
+export const _XXXX__ADD = `${DIT_CONNECT}/_x-x_/add`;
+export const _XXXX__EDIT = `${DIT_CONNECT}/_x-x_/edit/:id`;
+
+/** /////// End PATHS //////// */
+export const _XXXX_ = '_x-x_';
+
+/** ************************* */
+/*    PERMISSIONS           */
+/** ************************* */
+
+export const ACCESS__XXXX_: string = 'access__x_x_';
+export const CREATE__XXXX_: string = 'create__x_x_';
+export const UPDATE__XXXX_: string = 'update__x_x_';

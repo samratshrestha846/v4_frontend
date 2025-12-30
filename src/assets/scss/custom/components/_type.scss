@@ -1,0 +1,74 @@
+//
+// type.scss
+//
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-weight: $font-weight-bold;
+}
+
+// Font sizes (Custom)
+.font-8 {
+  font-size: 0.5rem !important;
+}
+.font-10 {
+  font-size: 0.625rem !important;
+}
+
+.font-11 {
+  font-size: 0.6875rem !important;
+}
+
+.font-12 {
+  font-size: 0.75rem !important;
+}
+
+.font-13 {
+  font-size: 0.8125rem !important;
+}
+
+.font-14 {
+  font-size: 0.875rem !important;
+}
+
+.font-15 {
+  font-size: 0.9375rem !important;
+}
+
+.font-16 {
+  font-size: 1rem !important;
+}
+
+.font-18 {
+  font-size: 1.125rem !important;
+}
+
+.font-20 {
+  font-size: 1.25rem !important;
+}
+
+.font-22 {
+  font-size: 1.375rem !important;
+}
+
+.font-24 {
+  font-size: 1.5rem !important;
+}
+.font-32 {
+  font-size: 2rem !important;
+}
+
+.font-48 {
+  font-size: 3rem !important;
+}

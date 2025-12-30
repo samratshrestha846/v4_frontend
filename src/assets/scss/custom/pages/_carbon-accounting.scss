@@ -1,0 +1,260 @@
+.carbon-summery {
+  font-family: Nunito;
+  .summary_card {
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+
+    &.week {
+      border-bottom: 3px solid #845adf;
+      .card-title {
+        background: #845adf;
+      }
+    }
+    &.month {
+      border-bottom: 3px solid #23b7e5;
+      .card-title {
+        background: #23b7e5;
+      }
+    }
+    &.months {
+      border-bottom: 3px solid #f5b849;
+      .card-title {
+        background: #f5b849;
+      }
+    }
+    &.year {
+      border-bottom: 3px solid #26bf94;
+      .card-title {
+        background: #26bf94;
+      }
+    }
+  }
+}
+.summary-title {
+  color: #07092f;
+  font-family: Nunito;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.wallet {
+  display: grid;
+  background-image: url('/images/wallet.jpg');
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 2px 0px 27px 0px rgba(15, 71, 116, 0.08);
+  .wallet-bg {
+    background: rgba(46, 121, 220, 0.4);
+  }
+  .amount {
+    color: #ccc;
+  }
+}
+.wallet-shadow {
+  .wallet-shadow-1 {
+    border-radius: 0.1rem;
+    background: rgba(46, 121, 220, 0.8);
+    width: 80%;
+    height: 0.5rem;
+    margin: auto;
+    box-shadow: 2px 0px 27px 0px rgba(15, 71, 116, 0.08);
+  }
+  .wallet-shadow-2 {
+    border-radius: 0.1rem;
+    background: rgba(7, 197, 102, 0.5);
+    width: 60%;
+    height: 0.5rem;
+    margin: auto;
+    box-shadow: 2px 0px 27px 0px rgba(7, 197, 102, 0.5);
+  }
+}
+
+.top-gainer-card-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+
+  .top-gainer-card {
+    display: flex;
+    flex: 1;
+    flex-basis: calc((100% / 5) - (4 * 1rem / 5));
+    max-width: calc((100% / 5) - (4 * 1rem / 5));
+    min-width: 10rem;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #dfe1e6;
+    border-radius: 4px;
+    padding: 1rem 0.75rem;
+    gap: 0.75rem;
+    overflow: hidden;
+
+    .top-gainer-card-content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+
+      h4 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .text-truncate {
+    max-width: 150px;
+  }
+}
+
+.carbon-credit-tabs {
+  .tab-content {
+    margin-top: 0.5rem;
+  }
+}
+
+.carbon-analytics {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1.5rem;
+
+  .total-carbon-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: $white;
+    box-shadow: 0px 0px 6px 0px #0f47741f;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    overflow: hidden;
+
+    .avatar-sm {
+      width: 2rem;
+      height: 2rem;
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .total-claimed {
+    min-height: 100%;
+  }
+}
+
+.carbon-accounting-summary-wrapper {
+  padding: 0px 0.5rem;
+
+  .carbon-analytics-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-bottom: 1px solid #dfe1e6;
+    padding-bottom: 0.25rem;
+  }
+}
+
+.carbon-credit-filters {
+  .carbon-credit-duration-filter {
+    border: 1px solid #dfe1e6;
+    border-radius: 4px;
+
+    .duration-option-btn {
+      margin: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+
+      &:first-child {
+        border-top-left-radius: 3px !important;
+        border-bottom-left-radius: 3px !important;
+      }
+
+      &.active-duration {
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+      &:not(.active-duration) {
+        color: $darkIndigo;
+        background-color: $white;
+        border-color: $white;
+
+        &:not(:last-child) {
+          border: 1px transparent;
+          border-right: 1px solid #dfe1e6;
+        }
+
+        &:hover {
+          background-color: #edf2f7 !important;
+          border-color: #edf2f7 !important;
+        }
+      }
+    }
+
+    .dropdown {
+      .duration-option-btn {
+        border-right: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
+      }
+
+      .duration-option-btn:hover {
+        margin: 0 !important;
+      }
+    }
+
+    .btn-light {
+      box-shadow: none !important;
+    }
+  }
+  .css-yk16xz-control {
+    border: 1px solid #dfe1e6;
+    .css-g1d714-ValueContainer {
+      .css-1wa3eu0-placeholder {
+        color: #172b4d;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .top-gainer-card-wrapper {
+    .top-gainer-card {
+      flex: auto;
+      flex-grow: 1;
+      width: 100%;
+      max-width: none;
+    }
+
+    .text-truncate {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  .carbon-analytics {
+    align-items: center;
+
+    .total-carbon-card {
+      flex: auto;
+      flex-grow: 1;
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

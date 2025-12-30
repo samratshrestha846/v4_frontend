@@ -1,0 +1,3 @@
+const PROFILE_PICTURE_ALLOWED_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp'];
+
+export default PROFILE_PICTURE_ALLOWED_FILE_EXTENSIONS;

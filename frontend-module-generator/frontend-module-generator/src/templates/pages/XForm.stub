@@ -1,0 +1,51 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Row, Col, Form } from 'react-bootstrap';
+import CancelButton from '@uhub/components/Form/CancelButton';
+import SubmitButton from '@uhub/components/Form/SubmitButton';
+import BackendValidationMessage from '@uhub/components/BackendValidationMessage';
+import { _X_FormProps } from '../types/_X_';
+import use_X_Form from '../hooks/use_X_Form';
+
+type Props = {
+  defaultValues: _X_FormProps;
+};
+const _X_Form: React.FC<Props> = ({ defaultValues }) => {
+  const {
+    register,
+    control,
+    errors,
+    handleSubmit,
+    serverValidationError,
+    setServerValidationError,
+    submitted,
+    navigateToList,
+    onSubmit,
+  } = use_X_Form(defaultValues);
+
+  return (
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      {serverValidationError && (
+        <BackendValidationMessage
+          setServerValidationError={setServerValidationError}
+        />
+      )}
+      <Row>
+        <Col xl={6} lg={6} md={6} className="mb-3">
+        {/* @TODO: Add form fields */}
+        </Col>
+      </Row>
+
+      <Row className="">
+        <Col>
+          <div className="float-end button-list">
+            <CancelButton redirectOnClick={navigateToList} />
+            <SubmitButton disable={submitted} />
+          </div>
+        </Col>
+      </Row>
+    </Form>
+  );
+};
+
+export default _X_Form;

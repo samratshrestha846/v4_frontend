@@ -1,0 +1,34 @@
+{
+  "errorCode": {
+    "1": "Pump Runtime Alarm - The pump cannot move enough nutrient.",
+    "2": "Unplanned Nutrient Flow detected.",
+    "3": "Battery Voltage is too low to dose reliably.",
+    "4": "Conductivity reading has exceeded the alarm level {{alarm_level}} µS/m.",
+    "5": "The conductivity sensor has stopped communicating with the doser.",
+    "6": "Auto calibration failed",
+    "7": "No Nutrient Alarm - The pump failed to move any nutrient.",
+    "8": "Conductivity reading exceeded the skip level {{conductivity_skip_level}} µS/m for {{conductivity_skip_limit}} consecutive doses.",
+    "9": "Hourly water flow limit {{water_flow_limit}} L/Hour exceeded.",
+    "10": "Memory error - DIT Technicians will check and reset settings.",
+    "11": "Unsteady Dosing",
+    "12": "Conductivity spike not detected",
+    "13": "Unexpected Pulsing. Check Nutrient Meter",
+    "14": "Failed to meet dosing target"
+  },
+  "alarmTitle": {
+    "1": "Pump Runtime Alarm",
+    "2": "Unplanned Nutrient Flow",
+    "3": "Low Battery Voltage",
+    "4": "Conductivity Alarm",
+    "5": "Conductivity Sensor Error",
+    "6": "Auto Calibration Error",
+    "7": "No Nutrient Alarm",
+    "8": "Conductivity Skip Alarm",
+    "9": "Hourly Water Flow Limit Exceeded",
+    "10": "Memory Error",
+    "11": "Unsteady Dosing",
+    "12": "Conductivity Spike Alarm",
+    "13": "Unexpected Pulsing",
+    "14": "Failed to meet dosing target"
+  }
+}

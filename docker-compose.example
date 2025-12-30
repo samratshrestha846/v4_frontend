@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+
+  react:
+    build:
+      context: .
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - 7010:3000
+
+  

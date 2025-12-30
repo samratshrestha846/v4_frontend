@@ -1,0 +1,52 @@
+// Button Shadows
+@each $nutrient, $value in $nutrient-theme {
+  .text-#{$nutrient} {
+    color: $value;
+  }
+}
+
+// Supplement background color
+@each $supplement, $value in $supplement-theme {
+  .supplement-bg-#{$supplement} {
+    background-color: $value !important;
+  }
+}
+
+// Supplement background color lighten
+@each $supplement, $value in $supplement-theme {
+  .supplement-bg-#{$supplement}-lighten {
+    @include bg-variant-light($value);
+  }
+}
+
+// Supplement border color
+@each $supplement, $value in $supplement-theme {
+  .supplement-border-#{$supplement} {
+    border-color: $value !important;
+  }
+}
+
+// Supplement droplet color
+@each $supplement, $value in $supplement-theme {
+  .supplement-color-#{$supplement} {
+    color: $value !important;
+  }
+}
+
+.feed-analysis-wrapper-card {
+  border: 1px solid #edf1f6;
+  box-shadow: none;
+
+  .card-body {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+.nutrient-consumption-breakdowns {
+  button {
+    border-radius: 0.125rem !important;
+    &:hover {
+      background-color: $ghostWhite;
+    }
+  }
+}

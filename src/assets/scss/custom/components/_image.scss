@@ -1,0 +1,33 @@
+.img-cover {
+  object-fit: cover;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.img-fill {
+  object-fit: fill;
+}
+
+.img-scale-down {
+  object-fit: scale-down;
+}
+
+.uploaded-image-wrapper {
+  position: relative;
+
+  .uploaded-img-remove-btn {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    .uploaded-img-remove-btn {
+      display: inline-block;
+    }
+  }
+}

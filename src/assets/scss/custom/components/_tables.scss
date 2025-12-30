@@ -1,0 +1,68 @@
+//
+// tables.scss
+//
+
+//Table centered (Custom)
+.table-centered {
+  th,
+  td {
+    vertical-align: middle !important;
+  }
+}
+
+// Custom table components (Custom)
+.table {
+  .table-user {
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .action-icon {
+    color: $gray-600;
+    font-size: 1.2rem;
+    display: flex;
+    padding: 0 3px;
+
+    &:hover {
+      color: $gray-700;
+    }
+  }
+}
+
+// Tables fluid
+.table-nowrap {
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+.text-truncate-td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 5px;
+  max-width: 10px;
+}
+
+.text-truncate-td[data-tooltip]:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #ffffff;
+  color: #0c2546;
+  box-shadow: 0px 5px 30px 0px rgba(15, 71, 116, 0.07);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10;
+  bottom: 80px;
+}
+
+tr {
+  position: relative;
+}
+
+.table-no-min-height {
+  min-height: auto !important;
+}

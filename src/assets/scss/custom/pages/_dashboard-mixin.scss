@@ -1,0 +1,112 @@
+@mixin summary-card($bb) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid $bb;
+  @media (min-width: 992px) {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}
+@mixin item-icon($bg) {
+  padding: 0.75rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg;
+}
+@mixin summary-icon {
+  font-size: 1.5rem;
+  color: $white;
+}
+@mixin item-count-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin item-count {
+  color: #07092f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+@mixin item-detail {
+  color: #7c7d8f;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+@mixin status-card {
+  border-radius: 0.25rem;
+  border: 1px solid #ebecf2;
+  background: $white;
+  box-shadow: 2px 0px 27px 0px rgba(15, 71, 116, 0.08);
+  height: fit-content;
+}
+@mixin top-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #ebecf2;
+  padding: 1.12rem;
+}
+@mixin top-title {
+  color: #424360;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+@mixin top-action {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+@mixin action-icon {
+  font-size: 1rem;
+  color: #acacbe;
+  &:hover {
+    color: $secondary3;
+  }
+  &:active,
+  &:focus {
+    color: $secondary3;
+  }
+}
+@mixin line($bg) {
+  width: 5.25rem;
+  height: 0.25rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background-color: $bg;
+}
+@mixin dot($bg) {
+  content: '\A';
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: $bg;
+  margin-right: 0.69rem;
+}
+@mixin rain-status($bg) {
+  &::before {
+    content: '\A';
+    width: 1rem;
+    height: 1rem;
+    background-image: $bg;
+    box-shadow: 2px 0px 27px 0px rgba(255, 153, 0, 0.2);
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+}

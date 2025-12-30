@@ -1,0 +1,251 @@
+//
+// custom-variables.scss
+//
+
+// Background left-sidebar
+$bg-leftbar: linear-gradient(135deg, #8f75da 0%, #727cf5 60%);
+$bg-leftbar-light: #ffffff;
+$bg-leftbar-dark: #313a46;
+$bg-topnav: #313a46;
+
+// Deatched left sidenav
+$bg-detached-leftbar: #ffffff;
+
+// Topbar Height
+$topbar-height: 70px;
+
+// Logo Display
+$logo-light-display: block;
+$logo-dark-display: none;
+// Logo auth display
+$logo-auth-light-display: none;
+$logo-auth-dark-display: block;
+
+// Leftbar width
+$leftbar-width: 260px;
+
+// Boxed Layout
+$boxed-layout-width: 1300px;
+$boxed-layout-bg: #ffffff;
+
+// Menu item colors (Default-dark)
+$menu-item: #cedce4;
+$menu-item-hover: #ffffff;
+$menu-item-active: #ffffff;
+
+// Menu item colors (light)
+$menu-item-light: #6c757d;
+$menu-item-light-hover: #727cf5;
+$menu-item-light-active: #ffffff;
+
+// Detached Menu item colors
+$menu-item-dark: #6c757d;
+$menu-item-dark-hover: #727cf5;
+$menu-item-dark-active: #727cf5;
+
+// Dark sidenav Menu item color
+$sidebar-dark-menu-item: #8391a2;
+$sidebar-dark-menu-item-hover: #bccee4;
+$sidebar-dark-menu-item-active: #ffffff;
+
+// Rightbar Width
+$rightbar-width: 280px;
+$rightbar-bg: #ffffff;
+$rightbar-title-bg: #313a46;
+$rightbar-title-color: #ffffff;
+$rightbar-title-btn-bg: #444e5a;
+$rightbar-title-btn-color: #ffffff;
+$rightbar-overlay-bg: #37404a;
+
+// Topbar Background
+$bg-topbar: #ffffff;
+$bg-topbar-dark: #313a46;
+
+// Topbar Search
+$bg-topbar-search: #f1f3fa;
+$bg-topbar-dark-search: #3c4655;
+
+// Helpbox
+$help-box-light-bg: rgba(255, 255, 255, 0.07);
+$help-box-dark-bg: #727cf5;
+
+// Font weight
+$font-weight-semibold: 600;
+
+// Dropdown Large
+$dropdown-lg-width: 320px;
+
+// Page title color
+$page-title-color: inherit;
+
+// Nav-pill background
+$nav-pills-bg: #eef2f7;
+
+// Custom-accordion
+$custom-accordion-title-color: #313a46;
+
+// Dragula demo background
+$dragula-bg: #f7f9fb;
+
+// Form wizard header background
+$form-wizard-header-bg: #eef2f7;
+
+// Text title color
+$text-title-color: #6c757d;
+
+// card Loader background
+$card-loader-bg: #313a46;
+
+// Chat widget
+$chat-primary-user-bg: #fef5e4;
+$chat-secondary-user-bg: #f1f3fa;
+
+// User authentication Background
+$auth-bg: #ffffff;
+$auth-bg-pattern-img: url('../../../images/bg-auth.jpg');
+
+// Apex chart
+$apex-grid-color: #f9f9fd;
+
+// Hero
+$hero-bg: linear-gradient(to bottom, #8669ed, #727cf5);
+
+//DIT-Primary Color
+$primary-color: #1a4784;
+
+// Nutrient Supplement Color Coding
+$phosphorus: #074891;
+$sulphur: #e1ce3b;
+$nitrogen: #0a7704;
+$urea_equivalent: #f4f4f4;
+$crude_protein: #7a4517;
+$iodine: #6600bb;
+$cobalt: #d0d0d0;
+$copper: #c88033;
+$zinc: #7d80b0;
+$selenium: #ff2f93;
+$manganese: #9c7ac7;
+$magnesium: #198c19;
+$sodium: #ab5cf2;
+$chloride: #00bb00;
+$peg: #90ee90;
+
+$water: #44badc;
+$nutrient: #ffbc00;
+
+$nutrient-theme: (
+  'phosphorus': $phosphorus,
+  'sulphur': $sulphur,
+  'nitrogen': $nitrogen,
+  'urea-equivalent': $urea_equivalent,
+  'crude-protein': $crude_protein,
+  'iodine': $iodine,
+  'cobalt': $cobalt,
+  'copper': $copper,
+  'zinc': $zinc,
+  'selenium': $selenium,
+  'manganese': $manganese,
+  'magnesium': $magnesium,
+  'sodium': $sodium,
+  'chloride': $chloride,
+  'water': $water,
+  'nutrient': $nutrient,
+  'peg': $peg,
+);
+
+// Supplement color code
+$defaultWaterTest: #20bde7;
+$uProOrange: #fb7c11;
+$uProOrangeHigh: #df6704;
+$uProOrangeHighPhos: #df6704;
+$uProGreen: #82c343;
+$uProBlue: #355ee8;
+$uProSouthern: #455570;
+$uProForage: #ee9f22;
+$uProWeaner: #15a3c9;
+$uTrace: #116a8e;
+$uTracePremium: #116a8e;
+$uTracePremiumCombo: #116a8e;
+$uTracePremiumCattle: #116a8e;
+$uTracePremiumSheep: #116a8e;
+$uTraceClassic: #116a8e;
+$uTetany: #7e8ea6;
+$uBloat: #5f8368;
+$uClamRange: #83b6e7;
+$uCalmWeaner: #83b6e7;
+$uCalmPremiumCombo: #83b6e7;
+$uCalm: #83b6e7;
+$uProMulga: #b8627d;
+$uProOat: #a52a2a;
+
+$supplement-theme: (
+  'DefaultWaterTest': $defaultWaterTest,
+  'uProOrange': $uProOrange,
+  'uProOrangeHigh': $uProOrangeHigh,
+  'uProOrangeHighPhos': $uProOrangeHighPhos,
+  'uProGreen': $uProGreen,
+  'uProBlue': $uProBlue,
+  'uProSouthern': $uProSouthern,
+  'uProForage': $uProForage,
+  'uProWeaner': $uProWeaner,
+  'uTrace': $uTrace,
+  'uTracePremium': $uTracePremium,
+  'uTracePremiumCombo': $uTracePremiumCombo,
+  'uTracePremiumCattle': $uTracePremiumCattle,
+  'uTracePremiumSheep': $uTracePremiumSheep,
+  'uTraceClassic': $uTraceClassic,
+  'uTetany': $uTetany,
+  'uBloat': $uBloat,
+  'uClamRange': $uClamRange,
+  'uCalmWeaner': $uCalmWeaner,
+  'uCalmPremiumCombo': $uCalmPremiumCombo,
+  'uCalm': $uCalm,
+  'uProMulga': $uProMulga,
+  'uProOat': $uProOat,
+);
+
+// scss-docs-start color-variables
+// $blue:       #2c8ef8;
+$primary: #174889;
+$secondary: #04723b;
+$secondary1: #2d9646;
+$secondary2: #82c342;
+$secondary3: #056a8d;
+$secondary4: #1aa1bd;
+
+// scss-docs-end color-variables
+
+//Breadcrumb
+$breadcrumb-divider-color: $secondary3;
+$breadcrumb-color: $secondary3;
+
+$gray: #6c757d;
+$mediumGray: #999999;
+$lightGray: #dfe1e6;
+$paleGray: #f9fafb;
+$slateGray: #a0a8b6;
+$steelGray: #6b778c;
+$softGray: #acacbe;
+$ghostWhite: #f2f3fa;
+$frostWhite: #f2f2f2;
+$orange: #fb7c11;
+
+// Alert
+$darkIndigo: #172b4d;
+$yellow50: #fef8ed;
+$green50: #e9f9f4;
+$red50: #fdeeec;
+$sky50: #e9f8fc;
+$orange50: #fff2e7;
+
+$red500: #e6533c;
+
+// Water Fertilizer color - Horticulture
+
+$agWater: #20bde7;
+$agFertilizer: #82c342;
+
+// Water Supplement color
+
+$nutrientTargetDoseColor: #775dd0;
+$supplementColor: #ffbc00;

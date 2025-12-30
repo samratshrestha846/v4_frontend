@@ -1,0 +1,25 @@
+import { useQuery } from '@tanstack/react-query';
+import { _XXXX_ } from '../constants/constant';
+import HttpApi from '../../Http/http';
+import { _X_Response } from '../types/_X_';
+
+export default function useRead_X_(id?: string) {
+  const apiCore = new HttpApi();
+  const read_X_ = async (): Promise<_X_Response> => {
+    const response = await apiCore.get(`${_XXXX_}/${id}`);
+    return response.data.data;
+  };
+  const { data, isFetching, isFetched, isError } = useQuery<_X_Response>({
+    queryKey: ['_X_', id],
+    queryFn: read_X_,
+    refetchOnWindowFocus: false,
+    enabled: !!id,
+  });
+
+  return {
+    data,
+    isFetching,
+    isFetched,
+    isError,
+  };
+}

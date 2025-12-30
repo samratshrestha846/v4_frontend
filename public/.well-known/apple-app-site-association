@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3NVUH7U4ZW.au.com.uhub",
+        "paths": [
+          "/password-reset/*",
+          "/auth/change-password*"
+        ]
+      },
+      {
+        "appID": "3NVUH7U4ZW.au.com.uhub.test",
+        "paths": [
+          "/password-reset/*",
+          "/auth/change-password*"
+        ]
+      }
+    ]
+  }
+}

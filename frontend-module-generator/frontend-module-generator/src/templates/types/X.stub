@@ -1,0 +1,18 @@
+import { QueryParam } from '@uhub/types/common';
+import { GeneralResponse } from '@uhub/types/generalResponse';
+
+export type _X_Response = {
+  id: number,
+  // @TODO: Add other fields here
+};
+
+export type _X_FormProps = {
+  // @TODO: Add form fields here
+};
+
+export interface _X_ListResponse 
+  extends GeneralResponse<_X_Response[]> {
+  data: _X_Response[];
+}
+
+export type _X_Params = QueryParam & {};

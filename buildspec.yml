@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+
+  pre_build:
+    commands:
+      - echo "Installing dependencies using npm ci..."
+      - npm ci || npm install
+      - echo "Pruning unused dependencies..."
+      - npm prune
+
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: dist
+
+cache:
+  paths:
+    - ~/.npm
+    - package-lock.json

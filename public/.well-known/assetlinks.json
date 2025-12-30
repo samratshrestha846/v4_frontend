@@ -1,0 +1,32 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.uhub",
+      "sha256_cert_fingerprints": [
+        "74:71:6C:41:75:87:8D:52:67:C8:C9:BC:E9:D9:1C:F6:5F:F2:41:3D:08:80:99:CC:BC:D7:D7:B9:06:DA:9F:2B",
+        "EF:EC:EA:27:59:44:92:55:3D:D6:90:93:C9:1E:4E:6E:70:89:29:C6:5F:48:58:B9:84:4F:17:09:9F:6D:F3:64",
+        "7F:92:3E:56:36:E2:1E:E2:86:6D:A2:05:81:35:94:7F:E0:3D:93:25:D3:6B:96:01:34:8E:5C:53:92:0B:5B:CD",
+        "B1:44:E7:D5:21:43:E2:29:AE:79:6C:C3:FC:8F:88:FD:3A:FB:2C:96:7D:BE:96:73:20:32:FF:72:05:94:89:FF"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.uhub.test",
+      "sha256_cert_fingerprints": [
+        "74:71:6C:41:75:87:8D:52:67:C8:C9:BC:E9:D9:1C:F6:5F:F2:41:3D:08:80:99:CC:BC:D7:D7:B9:06:DA:9F:2B",
+        "EF:EC:EA:27:59:44:92:55:3D:D6:90:93:C9:1E:4E:6E:70:89:29:C6:5F:48:58:B9:84:4F:17:09:9F:6D:F3:64",
+        "7F:92:3E:56:36:E2:1E:E2:86:6D:A2:05:81:35:94:7F:E0:3D:93:25:D3:6B:96:01:34:8E:5C:53:92:0B:5B:CD",
+        "B1:44:E7:D5:21:43:E2:29:AE:79:6C:C3:FC:8F:88:FD:3A:FB:2C:96:7D:BE:96:73:20:32:FF:72:05:94:89:FF"
+      ]
+    }
+  }
+]

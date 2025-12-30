@@ -1,0 +1,70 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import CustomLoader from '@uhub/components/CustomLoader';
+import CustomDataTable from '@uhub/components/CustomDataTable';
+import Pagination from '@uhub/components/Pagination';
+import { prepareDynamicUrl } from '@uhub/helpers';
+import {
+  CustomDropdownMenuItem,
+  ListTableProps,
+  TableColumn,
+} from '@uhub/types/common';
+import ActionDropdown from '@uhub/components/ActionDropdown';
+import { _X_ListResponse } from '../types/_X_';
+import { _XXXX__EDIT, UPDATE__XXXX_ } from '../constants/constant';
+
+const _X_Table: React.FC<ListTableProps<_X_ListResponse>> = ({
+  isFetching,
+  data,
+  filters,
+  setFilters,
+}) => {
+  const actionColumnFormatter = (row: any) => {
+    const menuItems: CustomDropdownMenuItem[] = [
+      {
+        label: 'Edit',
+        icon: 'bx bx-edit',
+        url: prepareDynamicUrl(_XXXX__EDIT, row.id),
+        permission: UPDATE__XXXX_,
+      },
+    ];
+
+    return (
+      <ActionDropdown
+        icon="bx bx-dots-vertical-rounded"
+        containerClass="custom-dropdown"
+        menuItems={menuItems}
+      />
+    );
+  };
+
+  const columns: TableColumn[] = [
+    {
+      dataField: 'action',
+      text: '',
+      formatter: actionColumnFormatter,
+    },
+  ];
+
+  const handlePageChange = (selectedItem: any) => {
+    setFilters((prev: any) => ({
+      ...prev,
+      page: selectedItem.selected + 1,
+    }));
+  };
+
+  if (isFetching) return <CustomLoader />;
+
+  return (
+    <>
+      <CustomDataTable columns={columns} data={data!.data} />
+      <Pagination
+        data={data!.meta_data!.pagination}
+        pageNumber={Number(filters.page ?? 1) - 1}
+        handlePageChange={handlePageChange}
+      />
+    </>
+  );
+};
+
+export default _X_Table;

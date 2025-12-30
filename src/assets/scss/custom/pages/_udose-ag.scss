@@ -1,0 +1,50 @@
+.box-wrapper {
+  padding: 0.5rem;
+
+  &:hover {
+    background: rgba(87, 86, 86, 0.1);
+  }
+
+  .session-run-date-icon {
+    color: #1aa1bd;
+  }
+
+  .session-run-time-icon {
+    color: #82c342;
+  }
+
+  .udoseag-summary {
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+
+  .summary-water-flow {
+    background: $agWater;
+  }
+
+  .summary-fertilizer-flow {
+    background: $agFertilizer;
+  }
+}
+
+.armed-seetings-card {
+  background: #ebecf2;
+  .card-header {
+    background: #ebecf2;
+    border-color: #dfe1e6;
+  }
+}
+
+.session-summary-link {
+  color: #6c757d !important;
+}
+
+.session-summary-item {
+  .box-wrapper {
+    background: $white;
+    &:hover {
+      background: $white;
+    }
+  }
+}

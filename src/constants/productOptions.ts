@@ -1,0 +1,13 @@
+import {
+  DEVICE_CONFIGURATION_TYPE_UDOSE_MINI,
+  DEVICE_CONFIGURATION_TYPE_UDOSE,
+  DEVICE_CONFIGURATION_TYPE_TANK,
+} from './constants';
+
+const PRODUCT_OPTIONS = [
+  { label: 'uDose', value: DEVICE_CONFIGURATION_TYPE_UDOSE },
+  { label: 'uDose Mini', value: DEVICE_CONFIGURATION_TYPE_UDOSE_MINI },
+  { label: 'Tank', value: DEVICE_CONFIGURATION_TYPE_TANK },
+];
+
+export default PRODUCT_OPTIONS;

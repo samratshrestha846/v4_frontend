@@ -1,0 +1,63 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "globalReturn": false
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "react/require-default-props": [0],
+    "react/jsx-filename-extension": [0],
+    "import/extensions": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-unresolved": "off",
+    "no-param-reassign": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": [
+          "./", 
+          "./src/components",
+          "./src/hooks",
+          "./src/helpers",
+          "./src/types",
+          "./src/routes",
+          "./src/modules/ditconnect"
+        ]
+      }
+    ],
+    "react/no-array-index-key": "off"
+  }
+}

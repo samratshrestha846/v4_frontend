@@ -1,0 +1,103 @@
+import { useEffect, useState } from 'react';
+import { useMutation } from '@tanstack/react-query';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { toast } from 'react-toastify';
+import { Tag, TagFormfields } from '../../../types/tag';
+import tag from '../../../helpers/api/tag';
+
+type Props = {
+  toggleModal: () => void;
+  refetch: any;
+  tagDetail?: Tag;
+};
+
+export default function useUpdateTag({
+  toggleModal,
+  refetch,
+  tagDetail,
+}: Props) {
+  const [serverValidationError, setServerValidationError] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const updateTag = (fromData: TagFormfields) => {
+    return tag.updateTag(fromData, tagDetail?.id as number);
+  };
+
+  const onSuccess = (): void => {
+    toast.success('Tag Created Successfully.');
+    toggleModal();
+    refetch();
+  };
+
+  const onError = (error: any) => {
+    if (error.response && error.response.status === 417) {
+      setServerValidationError(true);
+      const errorData = error.response.data.errors;
+      Object.keys(errorData).forEach((key) => {
+        setError(key as any, {
+          type: 'server',
+          message: errorData[key][0],
+        });
+      });
+    } else {
+      toast.error(error.response.data.status.message);
+    }
+    setSubmitted(false);
+  };
+
+  const updateTagMutation = useMutation({
+    mutationKey: ['create-tag'],
+    mutationFn: updateTag,
+    onSuccess,
+    onError,
+  });
+
+  const schemaResolver = yupResolver(
+    yup.object().shape({
+      type: yup
+        .string()
+        .typeError('Type is invalid')
+        .required('Type is required'),
+      name: yup
+        .string()
+        .typeError('Name is invalid')
+        .required('Name is required.'),
+    })
+  );
+
+  const {
+    register,
+    control,
+    handleSubmit,
+    reset,
+    setError,
+    formState: { errors },
+  } = useForm<TagFormfields>({ resolver: schemaResolver });
+
+  useEffect(() => {
+    if (tagDetail) {
+      reset({
+        type: tagDetail.type,
+        name: tagDetail.name,
+      });
+    }
+  }, [tagDetail]);
+
+  const onSubmit = async (formData: any) => {
+    setSubmitted(true);
+    updateTagMutation.mutate(formData);
+  };
+
+  return {
+    register,
+    control,
+    errors,
+    handleSubmit,
+    onSubmit,
+    serverValidationError,
+    setServerValidationError,
+    submitted,
+  };
+}

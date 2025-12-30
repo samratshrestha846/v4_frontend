@@ -1,0 +1,40 @@
+import React from 'react';
+import RouteWithPermission from '@uhub/routes/RouteWithPermission';
+import {
+  _XXXX__LIST, _XXXX__ADD, _XXXX__EDIT, ACCESS__XXXX_,  CREATE__XXXX_, UPDATE__XXXX_ 
+} from '../constants/constant';
+
+const List_X_ = React.lazy(() => import('../pages/List_X_'));
+const Add_X_ = React.lazy(() => import('../pages/Add_X_'));
+const Edit_X_ = React.lazy(() => import('../pages/Edit_X_'));
+
+const _XXXX__ROUTE = [
+  {
+    path: _XXXX__LIST,
+    element: (
+      <RouteWithPermission
+        component={List_X_}
+        permission={ACCESS__XXXX_}
+      />
+    ),
+  },
+  {
+    path: _XXXX__ADD,
+    element: (
+      <RouteWithPermission
+        component={Add_X_}
+        permission={CREATE__XXXX_}
+      />
+    ),
+  },
+  {
+    path: _XXXX__EDIT,
+    element: (
+      <RouteWithPermission
+        component={Edit_X_}
+        permission={UPDATE__XXXX_}
+      />
+    ),
+  },
+];
+export default _XXXX__ROUTE;
